@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
-import { NotesContext } from "../context/NotesContext";
-import ExpandedNote from "./ExpandedNote";
-import Modal from "./Modal";
+import { useContext, useState } from 'react';
+import { NotesContext } from '../context/NotesContext';
+import ExpandedNote from './ExpandedNote';
+import Modal from './Modal';
 
 export default function SingleNote({ id, noteData }) {
   const { handleChangeNoteData, handleDeleteNote } = useContext(NotesContext);
@@ -26,9 +26,9 @@ export default function SingleNote({ id, noteData }) {
         />
       </Modal>
 
-      <figure className={`singleNote w-60 h-56  bg-slate-500`}>
+      <figure className={`singleNote w-60 h-56  bg-[#363c45]`}>
         <header
-          className={`flex flex-col px-2 py-1 border-t-8 border-slate-800 bg-slate-600 text-white`}
+          className={`flex flex-col px-2 py-1 border-t-8 border-[#000000] bg-[#27292a] text-white`}
         >
           <div className="flex items-center justify-between">
             <div></div>
@@ -54,7 +54,7 @@ export default function SingleNote({ id, noteData }) {
             onChange={(e) => handleChangeNoteData(e, id)}
             name="body"
             value={noteData.body}
-            className="singleNote__textArea ease-in-out duration-150 w-full h-32 p-1 text-sm text-white bg-transparent outline-none outline-0 rounded focus:outline-2 outline-slate-300 bg-slate-600"
+            className="singleNote__textArea ease-in-out duration-150 w-full h-32 p-1 text-sm text-white bg-transparent outline-none outline-0 rounded focus:outline-2 outline-slate-100 bg-[#27292a]"
           >
             {noteData.body}
           </textarea>

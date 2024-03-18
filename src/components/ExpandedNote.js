@@ -1,7 +1,7 @@
-import { useState, useContext } from "react";
-import { NotesContext } from "../context/NotesContext";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { useState, useContext } from 'react';
+import { NotesContext } from '../context/NotesContext';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export default function ExpandedNote({ id, noteData, handleClickModalBtn }) {
   const { handleChangeNoteData, handleDeleteNote } = useContext(NotesContext);
@@ -16,16 +16,16 @@ export default function ExpandedNote({ id, noteData, handleClickModalBtn }) {
   return (
     <>
       <figure className={`flex flex-col justify-between w-96 bg-slate-500`}>
-        <header className="flex justify-between items-center w-full bg-slate-700 border-t-8 border-slate-800 px-2 py-1">
+        <header className="flex justify-between items-center w-full bg-[#282829] border-t-8 border-[#d9d9d9] px-2 py-1">
           <button
             onClick={() => setViewAsMarkDown(!viewAsMarkDown)}
             title={`${
-              viewAsMarkDown ? "View as plain text" : "View as Markdown"
+              viewAsMarkDown ? 'View as plain text' : 'View as Markdown'
             }`}
           >
             <i
               className={`${
-                viewAsMarkDown ? "bi bi-fonts" : "bi bi-markdown"
+                viewAsMarkDown ? 'bi bi-fonts' : 'bi bi-markdown'
               } text-xl text-white`}
             />
           </button>
@@ -54,10 +54,10 @@ export default function ExpandedNote({ id, noteData, handleClickModalBtn }) {
             className="prose h-96 p-3 overflow-y-scroll prose-stone bg-white"
           />
         ) : (
-          <section className="h-96 p-2">
+          <section className="h-96 p-2 bg-[#282828]">
             <textarea
               onChange={(e) => handleChangeNoteData(e, id)}
-              className="singleNote__textArea ease-in-out duration-150 w-full h-full text-sm text-white outline-none outline-0 rounded bg-transparent p-1 focus:bg-slate-600 focus:outline-2 outline-slate-300"
+              className="singleNote__textArea ease-in-out duration-150 w-full h-full text-sm text-white outline-none outline-0 rounded bg-[#131313] p-1 focus:outline-2 outline-slate-300"
               name="body"
               defaultValue={noteData.body}
               placeholder="Type something..."
@@ -65,7 +65,7 @@ export default function ExpandedNote({ id, noteData, handleClickModalBtn }) {
           </section>
         )}
 
-        <section className="flex justify-between text-white p-2">
+        <section className="flex justify-between text-white p-2 bg-[#282829]">
           <button
             title="Delete note"
             onClick={(e) => handleDeleteExpandedNote(e, id)}
