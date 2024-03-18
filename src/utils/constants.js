@@ -39,9 +39,15 @@ export const initialNotes = [
   },
 
   {
-    id: 'linuxTorvalds99',
+    id: 'workout69',
     title: '6 day Workout split',
     body: 'Day 1: Push- Chests and Triceps\nDay 2: Pull - Back and Biceps\nDay 3: Legs - Hamstrings\nDay 4: Shoulders and Abs\nDay 5: Push Pull Superset\nDay 6: Legs - Quads',
+    createdAt: '20/8/2023',
+  },
+  {
+    id: 'linuxTorvalds99',
+    title: 'Songs',
+    body: '> Blinding Lights\n> Starboy\n>Deja vu',
     createdAt: '20/8/2023',
   },
 ];
