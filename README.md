@@ -9,3 +9,6 @@ Notes app created with React.js and Tailwind CSS.
 - Each note can be edited in-line and its values will be updated immediately throughout the application.
 
 - Search for notes based on a term (such as its title, date of creation, or word included in it).
+
+## Live Demo
+https://react-notes-app-gold.vercel.app
